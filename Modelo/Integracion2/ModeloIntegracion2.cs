@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Modelo.Integracion2
+﻿namespace Modelo.Integracion2
 {
     public partial class ModeloIntegracion2
     {

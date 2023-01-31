@@ -1,3 +1,6 @@
+using Helper.Contrato;
+using Helper.Implementacion;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,6 +11,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //habilita la recepcion del XML & Jason 
 builder.Services.AddMvc().AddXmlSerializerFormatters().AddXmlDataContractSerializerFormatters();
+
+//AGREGO LA INYECCION DE DEPENDENCIA PARA LAS PETICONES HTTP
+builder.Services.AddSingleton<IRestHelper, RestHelper>();
 
 var app = builder.Build();
 
